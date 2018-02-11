@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{newItem.title}}</title>
+    <link rel="icon" type="image/ico" href="/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+    <link rel='stylesheet' href='stylesheets/reset.css' />
+    <link rel='stylesheet' href='stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="title-container">
+      <a href="/">
+        <img src="img/logo.svg" alt="logo" />
+        <div id="title">{{newItem.title}}</div>
+      </a>
+    </div>
+    <div class="single-item-container">
+      <div class="single-item-card">
+        <div class="single-item-contents">
+          <div id="item-title" class="single-item-title">
+            {{newItem.title}}
+          </div>
+          <div class="single-item-img">
+            <img src="{{newItem.imageUrl}}" alt="">
+          </div>
+          <div id="item-description" class="single-item-description">
+            {{newItem.description}}
+          </div>
+          <div class="single-item-navigation">
+            <a href="/">
+              <img class="back-arrow" src="img/back.svg" alt="back">
+            </a>
+            <a id="update-link" href="/items/{{newItem._id}}/update">
+              <div class="button update-button">
+                Update
+              </div>
+            </a>
+            <input type="hidden" id="item-id" value="{{newItem._id}}"
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
